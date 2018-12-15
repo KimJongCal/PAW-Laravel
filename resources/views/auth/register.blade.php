@@ -61,6 +61,17 @@
                             </div>
                         </div>
 
+                        <div class="form-group row{{ $errors->has('level') ? ' has-error ' : '' }}">
+                            <label class="col-md-4 control-label text-md-right">Level</label>
+
+                            <div class="col-md-6">
+                                <select name="level" class="form-control">
+                                    <option value="ADMIN">ADMIN</option>
+                                    <option value="USER">USER</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

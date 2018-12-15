@@ -14,9 +14,14 @@
                         </div>
                     @endif
 
-                    You are logged in!
-                    <hr>
-                    <a class="btn btn-primary" href="{{ route('users.index') }}">Users Management</a>
+                    @if(Auth::user()->level == "ADMIN")
+                        You are logged in as <strong>{{ Auth::user()->level }}</strong>!
+                        <hr>
+                        <a class="btn btn-primary" href="{{ route('users.index') }}">Users Management</a>
+                    @else
+                        You are logged in as <strong>{{ Auth::user()->level }}</strong>!
+                        <hr>
+                    @endif
                 </div>
             </div>
         </div>
